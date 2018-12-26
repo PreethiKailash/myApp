@@ -1,0 +1,24 @@
+{
+    "address":
+        [
+            {
+            "addressId":"1",
+            "address":"B-1, B-block, CPWD Qts",
+            "city":"Bangalore",
+            "state":"Karnataka",
+            "pin":"560040"
+            },{
+                "addressId":"2",
+                "address":"B-2, B-block, CPWD Qts",
+                "city":"Bangalore",
+                "state":"Karnataka",
+                "pin":"560040" 
+            },{
+                "addressId":"1",
+                "address":"B-3, B-block, CPWD Qts",
+                "city":"Bangalore",
+                "state":"Karnataka",
+                "pin":"560040"
+            }
+        ]
+    }

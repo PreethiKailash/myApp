@@ -1,0 +1,45 @@
+<mat-toolbar>TUNERLABS</mat-toolbar>
+<mat-card>
+<form [formGroup]="form" >
+
+ 
+  <!-- Name -->
+  <!-- <div class="form-group">
+    <label for="usernameInput">User Name</label> :
+      <mat-form-field>
+           <input matInput type="text" formControlName="username" class="form-control" placeholder="Please enter the name" required>
+     </mat-form-field>
+    <div>
+      <i style="color:red;" *ngIf="(form.controls.username.invalid) && (form.controls.username.touched)">User name must be 4 digit long.</i>
+    </div>
+  </div> -->
+
+  <!-- Email -->
+  <div class="form-group">
+      <label for="emailInput">Email</label> :
+        <mat-form-field>  
+           <input matInput type="text" formControlName="email" class="form-control" placeholder="Please enter the valid email" >
+        </mat-form-field> 
+         <div>
+        <i style="color:red;" *ngIf="(form.controls.email.invalid) && (form.controls.email.touched)">Enter the correct email</i>
+      </div>
+    </div>
+
+  <!-- Password -->
+  <div class="form-group">
+    <label for="passwordInput">Passsword</label> :
+      <mat-form-field>  
+         <input matInput type="password" formControlName="password" class="form-control" placeholder="Please enter the password" >
+      </mat-form-field> 
+       <div>
+      <i style="color:red;" *ngIf="(form.controls.password.invalid) && (form.controls.password.touched)">Enter the correct password</i>
+    </div>
+  </div>
+
+  <button  mat-button class="btn btn primary" (click)="onSubmit()" style="color:blue" [disabled]="form.invalid">Submit</button>
+
+
+</form>
+</mat-card>
+
+

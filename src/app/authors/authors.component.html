@@ -1,0 +1,30 @@
+<h2>{{authors.length}} Authors </h2>
+<ul>
+  <li *ngFor="let author of authors">
+    {{author}}
+
+  </li>
+</ul>
+
+<!-- displaying in the table view -->
+
+<table>
+  <tr>
+    <th>Authors</th>
+  </tr>
+
+  <tr *ngFor="let author of authors">
+      <td>
+        {{author}}
+      </td>
+  </tr>
+  
+</table>
+
+<ul>
+  <li *ngFor="let quotes of lines">
+    {{quotes.quotes}}
+    {{quotes.quoteBy}}
+  </li>
+</ul>
+

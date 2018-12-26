@@ -1,0 +1,65 @@
+<mat-card>
+
+    <form [formGroup]="form" *ngIf="!show">
+        <div class="form-group">
+          <label for="address">Address</label> :
+            <mat-form-field>
+                 <input matInput type="text" formControlName="address1" class="form-control" placeholder="Please enter the address" required>
+           </mat-form-field>
+          <div>
+            <i style="color:red;" *ngIf="(form.controls.address1.invalid) && (form.controls.address1.touched)">City name must be 4 digit long.</i>
+          </div>
+        </div>
+      
+        <div class="form-group">
+            <label for="city">City</label> :
+              <mat-form-field>  
+                 <input matInput type="text" formControlName="city" class="form-control" placeholder="Please enter city" >
+              </mat-form-field> 
+               <div>
+              <i style="color:red;" *ngIf="(form.controls.city.invalid) && (form.controls.city.touched)">Enter the correct city</i>
+            </div>
+          </div>
+      
+        <div class="form-group">
+          <label for="state">State</label> :
+            <mat-form-field>  
+               <input matInput type="text" formControlName="state" class="form-control" placeholder="Please enter the state" >
+            </mat-form-field> 
+             <div>
+            <i style="color:red;" *ngIf="(form.controls.state.invalid) && (form.controls.state.touched)">Enter the correct state</i>
+          </div>
+        </div>
+
+        <div class="form-group">
+            <label for="pin">Pin Code</label> :
+              <mat-form-field>  
+                 <input matInput type="text" formControlName="pin" class="form-control" placeholder="Please enter the pincode" >
+              </mat-form-field> 
+               <div>
+              <i style="color:red;" *ngIf="(form.controls.pin.invalid) && (form.controls.pin.touched)">Enter the correct pincode</i>
+            </div>
+        </div>
+
+        <button  mat-button class="btn btn primary" (click)="onSubmit()"  style="color:blue" [disabled]="form.invalid">Submit</button>
+
+      </form>
+
+      <div *ngIf="show">
+          <div>
+              <ul class="flex-container" style="display:flex; flex-direction: row; width:100%; flex-flow:row wrap; padding:0px; list-style:none;  justify-content: left;">
+                <li style="width:30%; margin-top: 8px;margin-right:20px;" >
+                  <mat-card>
+                  <span style="float:right; color: blue;" (click)="show=false">Edit</span>
+                      {{addrez.addressId}}
+                      {{addrez.address1}}
+                      {{addrez.city}}
+                      {{addrez.state}}
+                      {{addrez.pin}}
+                  </mat-card>
+                </li>
+                  </ul>
+            </div>
+       </div>
+     
+</mat-card>

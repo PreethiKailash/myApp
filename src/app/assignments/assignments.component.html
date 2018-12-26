@@ -1,0 +1,12 @@
+<p>
+  Parent works!
+</p>
+
+<h1>All Quotes</h1>
+<child [quotez]="obj?.quotes.allQuotes" [lines]='"allTheLines"' (fav)="addingFav($event)"></child>
+
+
+<h1>Fav. Quotes</h1>
+<child [quotez]="obj?.quotes.favouriteQuote" [lines]="'favLines'" (fav)="addingFav($event)"></child>
+
+

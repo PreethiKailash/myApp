@@ -1,0 +1,6 @@
+<mat-toolbar>Address Form</mat-toolbar>
+
+<button  mat-button (click)="addNewAddress()" style="color:red;">Add</button>
+ 
+
+<child-input  [addrez]="address" (addressAdd)="childAdd($event)" *ngFor="let address of addresses"> </child-input>

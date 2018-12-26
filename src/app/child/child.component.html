@@ -1,0 +1,93 @@
+<button mat-button *ngIf="lines=='allTheLines'" >Favourite</button>
+<button mat-button *ngIf="lines=='favLines'" >Not-Favourite</button>
+
+
+<!-- <ul>
+  <li *ngFor="let quotes of quotez; let i=index" >
+    <mat-card>
+    {{quotes.quotes}} 
+    {{quotes.quoteBy}}
+    <button mat-button (click)="favclick(i)" (click)="unfavclick(i)"  (click)="press(i,lines)" >Select</button>
+  </mat-card>
+  </li>
+</ul> -->
+
+
+ <!-- using flex working well -->
+
+
+<div>
+  <ul class="flex-container" style="display:flex; flex-direction: row; width:100%; flex-flow:row wrap; padding:0px; list-style:none;  justify-content: left;">
+    <li *ngFor="let quotes of quotez; let i=index" style="width:30%; margin-top: 8px; margin-right:20px;"> 
+      <mat-card>
+         {{quotes.quotes}} 
+         {{quotes.quoteBy}}
+         <button mat-button *ngIf="lines=='allTheLines'" (click)="favclick(i)" (click)="unfavclick(i)"  (click)="press(i,lines)" style="color:blue">Favourite</button>
+         <button mat-button *ngIf="lines=='favLines'"  (click)="favclick(i)" (click)="unfavclick(i)"  (click)="press(i,lines)" style="color:red">Not-Favourite</button>
+        </mat-card>
+    </li>
+  </ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
